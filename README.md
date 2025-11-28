@@ -1,3 +1,8 @@
+![Static Badge](https://img.shields.io/badge/author-javiergs-orange)
+![GitHub repo size](https://img.shields.io/github/repo-size/javiergs/App-SankeyChart)
+![Java](https://img.shields.io/badge/Java-17+-blue)
+![Platform](https://img.shields.io/badge/platform-Java_Swing-orange)
+
 A simple Java Swing application that renders a **Sankey (flow) diagram** using **JFreeChart**’s `FlowPlot`.  
 
 <p align="center">
