@@ -8,8 +8,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /**
- * A simple example of a Sankey chart using JFreeChart.
- * This example visualizes the distribution of a person's gross income into various categories.
+ * An example of a Sankey chart using JFreeChart.
  *
  * @author javiergs
  * @version 1.0
@@ -54,18 +53,20 @@ public class Main extends JFrame {
 	
 	private DefaultFlowDataset createDataset() {
 		DefaultFlowDataset dataset = new DefaultFlowDataset();
-		// column, origen, destination, percentage
+		// Column 0: From gross income to net + deductions
 		dataset.setFlow(0, "Gross Income", "Net Income", 80);
-		dataset.setFlow(0, "Gross Income", "Taxes", 20);
-		dataset.setFlow(1, "Net Income", "Housing", 25);
-		dataset.setFlow(1, "Net Income", "Savings", 25);
-		dataset.setFlow(1, "Net Income", "Lifestyle", 20);
+		dataset.setFlow(0, "Gross Income", "Taxes", 15);
+		dataset.setFlow(0, "Gross Income", "Benefits", 5);
+		// Column 1: From Net Income to spending categories
+		dataset.setFlow(1, "Net Income", "Housing", 30);
 		dataset.setFlow(1, "Net Income", "Food", 15);
-		dataset.setFlow(1, "Net Income", "Health", 5);
-		dataset.setFlow(1, "Net Income", "Donations", 5);
-		dataset.setFlow(1, "Net Income", "Amazon", 5);
-		dataset.setFlow(1, "Taxes", "Federal", 50);
-		dataset.setFlow(1, "Taxes", "State", 50);
+		dataset.setFlow(1, "Net Income", "Transportation", 10);
+		dataset.setFlow(1, "Net Income", "Savings", 20);
+		dataset.setFlow(1, "Net Income", "Leisure", 15);
+		dataset.setFlow(1, "Net Income", "Misc", 10);
+		// Column 1 (or 2) for taxes breakdown
+		dataset.setFlow(1, "Taxes", "Federal", 60);
+		dataset.setFlow(1, "Taxes", "State", 40);
 		return dataset;
 	}
 	
